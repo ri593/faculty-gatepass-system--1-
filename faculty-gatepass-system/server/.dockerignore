@@ -1,0 +1,5 @@
+node_modules
+.env
+uploads/qrcodes/*.png
+uploads/passes/*.pdf
+*.log

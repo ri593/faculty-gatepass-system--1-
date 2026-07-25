@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExitLine — Faculty Gate Out Pass Management System</title>
+<meta name="description" content="ExitLine routes faculty gate-out requests through HOD and Registrar approval, generates a scannable QR pass, and lets Security verify exit and entry — a complete campus gate pass ERP module.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231B2430'/%3E%3Crect x='30' y='30' width='40' height='40' fill='%23E8A33D' transform='rotate(45 50 50)'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+<header class="lp-header">
+  <div class="lp-header-inner">
+    <div class="lp-brand"><span class="lp-dot"></span> ExitLine</div>
+    <nav class="lp-nav">
+      <a href="#workflow">Workflow</a>
+      <a href="#roles">Roles</a>
+      <a href="#system">System Highlights</a>
+      <a href="app.html" class="lp-nav-cta">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="lp-hero">
+    <div class="lp-hero-inner">
+      <div class="lp-hero-copy">
+        <div class="lp-kicker">&#9679; Faculty Gate Pass Management System</div>
+        <h1>Every gate pass, tracked from request to return.</h1>
+        <p>ExitLine replaces the paper gate-out register with a proper approval chain: Faculty requests, HOD reviews, Registrar signs off with a scannable QR pass, and Security verifies exit and entry at the gate — with a full audit trail behind every decision.</p>
+        <div class="lp-hero-actions">
+          <a href="app.html" class="btn btn-amber lp-btn-lg">Sign in to ExitLine</a>
+          <a href="#workflow" class="btn btn-ghost lp-btn-lg lp-btn-ghost-dark">See how it works</a>
+        </div>
+        <div class="lp-hero-meta">No install required — accessible via web browser for all university departments.</div>
+      </div>
+
+      <div class="lp-hero-visual">
+        <div class="lp-mock-pass">
+          <div class="lp-mock-main">
+            <div class="lp-mock-id">GP-1001 · 2026-07-02</div>
+            <div class="lp-mock-name">Shobhnath Shukla</div>
+            <div class="lp-mock-dept">Computer Science &amp; Engineering · AU250505</div>
+            <div class="lp-mock-grid">
+              <div><span>Purpose</span><b>Bank Work</b></div>
+              <div><span>Out Time</span><b>11:00 AM</b></div>
+              <div><span>Expected Return</span><b>2:00 PM</b></div>
+            </div>
+          </div>
+          <div class="lp-mock-stub">
+            <span class="status-chip status-Approved">Approved</span>
+            <div class="lp-mock-qr" aria-hidden="true">
+              <svg viewBox="0 0 29 29" width="64" height="64">
+                <rect width="29" height="29" fill="#fff"/>
+                <g fill="#1B2430">
+                  <rect x="0" y="0" width="7" height="7"/><rect x="2" y="2" width="3" height="3" fill="#fff"/>
+                  <rect x="22" y="0" width="7" height="7"/><rect x="24" y="2" width="3" height="3" fill="#fff"/>
+                  <rect x="0" y="22" width="7" height="7"/><rect x="2" y="24" width="3" height="3" fill="#fff"/>
+                  <rect x="9" y="1" width="2" height="2"/><rect x="13" y="1" width="2" height="2"/><rect x="17" y="3" width="2" height="2"/>
+                  <rect x="9" y="9" width="2" height="2"/><rect x="12" y="9" width="4" height="2"/><rect x="17" y="9" width="2" height="2"/>
+                  <rect x="20" y="9" width="2" height="4"/><rect x="9" y="12" width="2" height="4"/><rect x="14" y="12" width="2" height="2"/>
+                  <rect x="9" y="17" width="4" height="2"/><rect x="15" y="17" width="2" height="4"/><rect x="20" y="15" width="2" height="2"/>
+                  <rect x="9" y="20" width="2" height="2"/><rect x="12" y="20" width="2" height="2"/><rect x="18" y="20" width="4" height="2"/>
+                  <rect x="24" y="9" width="2" height="2"/><rect x="24" y="13" width="2" height="6"/><rect x="20" y="20" width="2" height="2"/>
+                  <rect x="24" y="22" width="4" height="2"/><rect x="24" y="25" width="2" height="2"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="lp-float-card lp-float-1">HOD Approved <span>09:40 AM</span></div>
+        <div class="lp-float-card lp-float-2">Exit Recorded <span>Security · 01:05 PM</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STAT STRIP ============ -->
+  <section class="lp-stats">
+    <div class="lp-stats-inner">
+      <div><b>5</b><span>Role-based dashboards</span></div>
+      <div><b>3</b><span>Approval &amp; audit stages</span></div>
+      <div><b>100%</b><span>Server-enforced access control</span></div>
+      <div><b>&lt;1s</b><span>QR + PDF pass generation</span></div>
+    </div>
+  </section>
+
+  <!-- ============ WORKFLOW ============ -->
+  <section class="lp-section" id="workflow">
+    <div class="lp-section-head">
+      <div class="lp-eyebrow">Workflow</div>
+      <h2>One request, three checkpoints, one gate.</h2>
+      <p class="subtle" style="max-width:560px; margin:10px auto 0;">Every pass moves through the same chain — nobody exits the gate without a Registrar-approved, QR-verified pass.</p>
+    </div>
+    <div class="lp-flow">
+      <div class="lp-flow-step">
+        <div class="lp-flow-num">1</div>
+        <h3>Faculty submits</h3>
+        <p>Purpose, out time, and expected return — logged in under a minute.</p>
+      </div>
+      <div class="lp-flow-arrow">&rarr;</div>
+      <div class="lp-flow-step">
+        <div class="lp-flow-num">2</div>
+        <h3>HOD reviews</h3>
+        <p>Department head approves or rejects, with optional remarks.</p>
+      </div>
+      <div class="lp-flow-arrow">&rarr;</div>
+      <div class="lp-flow-step">
+        <div class="lp-flow-num">3</div>
+        <h3>Registrar signs off</h3>
+        <p>Final approval generates a scannable QR pass and a printable PDF.</p>
+      </div>
+      <div class="lp-flow-arrow">&rarr;</div>
+      <div class="lp-flow-step">
+        <div class="lp-flow-num">4</div>
+        <h3>Security verifies</h3>
+        <p>Scan at the gate records exact exit and return times.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROLES ============ -->
+  <section class="lp-section lp-section-dim" id="roles">
+    <div class="lp-section-head">
+      <div class="lp-eyebrow">Five dashboards, one system</div>
+      <h2>Everyone sees exactly what their role needs.</h2>
+    </div>
+    <div class="lp-roles">
+      <div class="lp-role-card">
+        <div class="lp-role-tag">Create request</div>
+        <h3>Faculty</h3>
+        <p>Submit new gate pass requests and track every past request's status in one place.</p>
+      </div>
+      <div class="lp-role-card">
+        <div class="lp-role-tag">Departmental review</div>
+        <h3>HOD</h3>
+        <p>Approve or reject requests from your own department, with a full history view.</p>
+      </div>
+      <div class="lp-role-card">
+        <div class="lp-role-tag">Final authority</div>
+        <h3>Registrar</h3>
+        <p>Give final sign-off across every department and generate the QR + PDF pass.</p>
+      </div>
+      <div class="lp-role-card">
+        <div class="lp-role-tag">Gate verification</div>
+        <h3>Security</h3>
+        <p>Look up a pass by code, record exit and entry, and review the day's gate log.</p>
+      </div>
+      <div class="lp-role-card">
+        <div class="lp-role-tag">System oversight</div>
+        <h3>Admin</h3>
+        <p>Manage users and departments, and pull status &amp; approval-time reports.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SYSTEM HIGHLIGHTS ============ -->
+  <section class="lp-section" id="system">
+    <div class="lp-section-head">
+      <div class="lp-eyebrow">System Highlights</div>
+      <h2>Built for Modern Campus Governance</h2>
+      <p class="subtle" style="max-width:620px; margin:10px auto 0;">ExitLine digitizes and automates gate movement across all university departments with isolated workflows, instant QR passes, and end-to-end security tracking.</p>
+    </div>
+    <div class="lp-stack-grid">
+      <div class="lp-stack-item"><b>Department Isolation</b><span>CSE, BBA, B.Com, LAW &amp; all departments operate independently with strict data privacy</span></div>
+      <div class="lp-stack-item"><b>Multi-Level Approval Chain</b><span>Faculty &rarr; HOD &rarr; Dean &rarr; Registrar routing with instant status updates</span></div>
+      <div class="lp-stack-item"><b>Scannable QR &amp; PDF Passes</b><span>Instant QR pass generation downloadable on HOD, Dean, &amp; Faculty dashboards</span></div>
+      <div class="lp-stack-item"><b>Real-Time Gate Verification</b><span>Gate security scans QR passes to log precise entry &amp; exit timestamps</span></div>
+      <div class="lp-stack-item"><b>Audit Trail &amp; Logging</b><span>Every decision, timestamp, and remark is recorded for complete transparency</span></div>
+      <div class="lp-stack-item"><b>Role-Based Access Control</b><span>Custom dashboards tailored for Faculty, HOD, Dean, Registrar, Security &amp; Admin</span></div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="lp-cta">
+    <div class="lp-cta-inner">
+      <h2>Ready to see it running?</h2>
+      <p>Sign in with a demo account for any role — no setup required.</p>
+      <a href="app.html" class="btn btn-amber lp-btn-lg">Sign in to ExitLine</a>
+    </div>
+  </section>
+</main>
+
+<footer class="lp-footer">
+  <div class="lp-footer-inner">
+    <div class="lp-brand"><span class="lp-dot"></span> ExitLine</div>
+    <div class="lp-footer-links">
+      <a href="app.html">Sign in</a>
+      <span>Faculty Gate Out Pass Management System</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Dependencies
+**/node_modules/
+
+# Environment variables
+**/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# VS Code
+.vscode/
+
+# Uploads (keep only .gitkeep)
+server/uploads/passes/*
+server/uploads/qrcodes/*
+
+!server/uploads/passes/.gitkeep
+!server/uploads/qrcodes/.gitkeep
+
+# OS files
+Thumbs.db
+.DS_Store

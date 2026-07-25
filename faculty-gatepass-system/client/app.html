@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — ExitLine</title>
+<meta name="description" content="Sign in to ExitLine — Faculty Gate Out Pass Management System.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231B2430'/%3E%3Crect x='30' y='30' width='40' height='40' fill='%23E8A33D' transform='rotate(45 50 50)'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ LOGIN ============ -->
+  <div class="login-screen" id="loginScreen">
+    <a href="index.html" class="back-home">&larr; ExitLine</a>
+    <div class="brand">
+      <div class="mark">&#9679; Gate Pass Management System</div>
+      <h1>ExitLine</h1>
+      <p>Faculty Gate Out Pass Management — sign in with your college email to continue.</p>
+    </div>
+    <form class="login-form" id="loginForm">
+      <div class="api-status" id="apiStatus"></div>
+      <div class="auth-tabs">
+        <button type="button" class="active" id="loginTab" onclick="showAuthMode('login')">Sign in</button>
+        <button type="button" id="registerTab" onclick="showAuthMode('register')">Create account</button>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input id="loginEmail" type="email" placeholder="you@rntu.ac.in" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input id="loginPassword" type="password" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+      <div class="login-error" id="loginError"></div>
+      <button type="submit" class="btn btn-amber" style="width:100%; padding:12px;">Sign in</button>
+    </form>
+    <form class="login-form" id="registerForm" style="display:none;">
+      <div class="api-status" id="registerApiStatus"></div>
+      <div class="auth-tabs">
+        <button type="button" id="loginTab2" onclick="showAuthMode('login')">Sign in</button>
+        <button type="button" class="active" id="registerTab2" onclick="showAuthMode('register')">Create account</button>
+      </div>
+      <div class="field"><label>Full name</label><input id="regName" required autocomplete="name"></div>
+      <div class="field"><label>ID number</label><input id="regEmployeeId" required placeholder="Employee or student ID"></div>
+      <div class="field"><label>Email</label><input id="regEmail" type="email" required autocomplete="email"></div>
+      <div class="field"><label>Password</label><input id="regPassword" type="password" required minlength="8" autocomplete="new-password"></div>
+      <div class="field"><label>Role</label><select id="regRole" required>
+        <option value="faculty">Faculty</option>
+        <option value="hod">HOD</option>
+        <option value="dean">Dean</option>
+        <option value="student">Student</option>
+      </select></div>
+      <div class="field"><label>Department</label><select id="regDepartment" required></select></div>
+      <div class="field"><label>Phone optional</label><input id="regPhone" autocomplete="tel"></div>
+      <div class="login-error" id="registerError"></div>
+      <button type="submit" class="btn btn-amber" style="width:100%; padding:12px;">Create account</button>
+    </form>
+    <div class="demo-hint">
+      Demo accounts (password <code>Passw0rd!</code> for all):<br>
+      faculty: shobhnath.shukla.au250505@rntu.ac.in &nbsp;·&nbsp; hod: meera.iyer@rntu.ac.in &nbsp;·&nbsp;
+      registrar: registrar@rntu.ac.in &nbsp;·&nbsp; security: security@rntu.ac.in &nbsp;·&nbsp; admin: admin@rntu.ac.in
+    </div>
+  </div>
+
+  <!-- ============ APP FRAME ============ -->
+  <div class="frame" id="frame">
+    <div class="topbar">
+      <div class="brandmini"><span class="dot"></span> ExitLine</div>
+      <div class="who">
+        <span id="whoName"></span>
+        <span class="rolepill" id="whoRole"></span>
+        <button class="switchbtn" onclick="logout()">Log out</button>
+      </div>
+    </div>
+    <div class="stripe-bar thin"></div>
+    <div class="body-wrap">
+      <div class="sidebar" id="sidebar"></div>
+      <div class="main" id="main"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><span class="sw"></span><span id="toastMsg"></span></div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
